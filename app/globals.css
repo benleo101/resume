@@ -73,6 +73,12 @@ a {
   pointer-events: none;
 }
 
+@media (max-width: 760px) {
+  .resume-shell::after {
+    display: none;
+  }
+}
+
 .resume-panel {
   background: var(--surface);
   border: 1px solid var(--border-soft);
