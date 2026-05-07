@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import ReactQueryProvider from "@/providers/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "KoronaMo Resume",
@@ -16,10 +15,8 @@ export default function RootLayout({
   return (
     <html lang="th">
       <body>
-        <ReactQueryProvider>
-          <Navbar />
-          {children}
-        </ReactQueryProvider>
+        <Navbar />
+        {children}
       </body>
     </html>
   );

@@ -32,11 +32,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare static export
-        run: |
-          rm -rf app/api
-          rm -rf app/user
-
       - name: Install dependencies
         run: npm ci
 
