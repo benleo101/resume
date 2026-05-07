@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PortfolioShowcase from "./portfolio/components/PortfolioShowcase";
+import { withBasePath } from "@/lib/site";
 
 const contact = [
   { label: "โทรศัพท์", value: "0896198222", icon: "phone", valueClass: "text-4xl", wrapClass: "md:whitespace-nowrap" },
@@ -17,28 +18,28 @@ const skillGroups = [
   {
     title: "Frontend",
     items: [
-      { label: "HTML", icon: "/HTML.png", tone: "bg-orange-100" },
-      { label: "CSS", icon: "/b3nj5m1n-logo-2582747_1920.png", tone: "bg-sky-100" },
-      { label: "JavaScript", icon: "/javascript.png", tone: "bg-amber-100" },
-      { label: "React", icon: "/react-js.png", tone: "bg-cyan-100" },
-      { label: "Next.js", icon: "/next-js-logo-png_seeklogo-394608.png", tone: "bg-stone-100" },
-      { label: "Flutter", icon: "/flutter.png", tone: "bg-blue-100" },
+      { label: "HTML", icon: withBasePath("/HTML.png"), tone: "bg-orange-100" },
+      { label: "CSS", icon: withBasePath("/b3nj5m1n-logo-2582747_1920.png"), tone: "bg-sky-100" },
+      { label: "JavaScript", icon: withBasePath("/javascript.png"), tone: "bg-amber-100" },
+      { label: "React", icon: withBasePath("/react-js.png"), tone: "bg-cyan-100" },
+      { label: "Next.js", icon: withBasePath("/next-js-logo-png_seeklogo-394608.png"), tone: "bg-stone-100" },
+      { label: "Flutter", icon: withBasePath("/flutter.png"), tone: "bg-blue-100" },
     ],
   },
   {
     title: "Backend",
     items: [
-      { label: "Node.js", icon: "/nodejs.png", tone: "bg-lime-100" },
-      { label: "TypeScript", icon: "/images.png", tone: "bg-blue-50" },
-      { label: "MySQL", icon: "/1711355118921.png", tone: "bg-orange-50" },
+      { label: "Node.js", icon: withBasePath("/nodejs.png"), tone: "bg-lime-100" },
+      { label: "TypeScript", icon: withBasePath("/images.png"), tone: "bg-blue-50" },
+      { label: "MySQL", icon: withBasePath("/1711355118921.png"), tone: "bg-orange-50" },
     ],
   },
   {
     title: "Tools",
     items: [
-      { label: "Bruno", icon: "/114530840.png", tone: "bg-yellow-50" },
-      { label: "Postman", icon: "/302491264_447689710712870_8058423586079742582_n.png", tone: "bg-orange-50" },
-      { label: "Codex", icon: "/codex-color.png", tone: "bg-stone-100" },
+      { label: "Bruno", icon: withBasePath("/114530840.png"), tone: "bg-yellow-50" },
+      { label: "Postman", icon: withBasePath("/302491264_447689710712870_8058423586079742582_n.png"), tone: "bg-orange-50" },
+      { label: "Codex", icon: withBasePath("/codex-color.png"), tone: "bg-stone-100" },
     ],
   },
 ];
@@ -48,7 +49,7 @@ const experience = [
     period: "2023 - ปัจจุบัน",
     role: "Full Stack Developer",
     company: "Orisma Technology Co., Ltd.",
-    logo: "/orisma_logo.jfif",
+    logo: withBasePath("/orisma_logo.jfif"),
     detail:
       "พัฒนาระบบจัดการพนักงานของ EZYHR ทั้งฝั่งเว็บและแอปพลิเคชัน พร้อมปรับปรุง ดูแล และเพิ่มฟีเจอร์ให้ระบบ Bizchat ตามความต้องการของผู้ใช้งาน",
   },
@@ -56,7 +57,7 @@ const experience = [
     period: "2021 - 2023",
     role: "Full Stack Developer",
     company: "Taximail",
-    logo: "/312975738_808718073443055_4907734522817416042_n.png",
+    logo: withBasePath("/312975738_808718073443055_4907734522817416042_n.png"),
     detail:
       "พัฒนาระบบ Customer Pos (Triller) มีทั้งฝั่งหน้าเว็บและแอปพลิเคชัน พัฒนาฟีเจอร์ใหม่ตามความต้องการของผู้ใช้งานและธุรกิจ เว็บแอปพลิเคชัน (Taximail) และพัฒนาระบบที่ให้องค์กรใช้มอบสิทธิประโยชน์ให้พนักงานทั้งเว็บและแอปพลิเคชัน (Jaijai)",
   },
@@ -64,7 +65,7 @@ const experience = [
     period: "2021",
     role: "Intern",
     company: "ITBT Corporation Co., Ltd.",
-    logo: "/295085729_497586959037678_4590051014935419138_n.jpg",
+    logo: withBasePath("/295085729_497586959037678_4590051014935419138_n.jpg"),
     detail:
       "พัฒนาระบบ Dashboard สำหรับจัดการข้อมูลหลังบ้าน เช่น ข้อมูลผู้ใช้ สถิติของระบบ และรายงานต่าง ๆ",
   },
@@ -139,7 +140,7 @@ export default function HomePage() {
           <div className="resume-panel-strong relative overflow-hidden rounded-[2rem] p-3">
             <div className="absolute inset-x-6 top-0 h-24 rounded-b-full bg-amber-200/60 blur-2xl" />
             <Image
-              src="/278735453_4871965362873173_2117511330460536517_n.jpg"
+              src={withBasePath("/278735453_4871965362873173_2117511330460536517_n.jpg")}
               alt="รูปโปรไฟล์ของ Leo Charudetch"
               width={360}
               height={360}
@@ -344,7 +345,7 @@ export default function HomePage() {
               </p>
               <div className="relative mt-4 aspect-square w-full overflow-hidden rounded-[1.5rem]">
                 <Image
-                  src="/line.jfif"
+                  src={withBasePath("/line.jfif")}
                   alt="Line"
                   fill
                   sizes="220px"
