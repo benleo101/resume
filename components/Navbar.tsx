@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { withBasePath } from "@/lib/site";
 
 const navItems = [
-  { href: "/#about", label: "เกี่ยวกับ" },
-  { href: "/#experience", label: "ประสบการณ์" },
-  { href: "/#education", label: "การศึกษา" },
-  { href: "/#portfolio", label: "Portfolio" },
-  { href: "/#contact", label: "ติดต่อ" },
+  { href: `${withBasePath("/")}#about`, label: "เกี่ยวกับ" },
+  { href: `${withBasePath("/")}#experience`, label: "ประสบการณ์" },
+  { href: `${withBasePath("/")}#education`, label: "การศึกษา" },
+  { href: `${withBasePath("/")}#portfolio`, label: "Portfolio" },
+  { href: `${withBasePath("/")}#contact`, label: "ติดต่อ" },
 ];
 
 export default function Navbar() {
@@ -19,7 +20,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-6xl">
         <div className="flex items-center justify-between gap-4">
           <Link
-            href="/"
+            href={withBasePath("/")}
             className="text-3xl font-bold tracking-[0.08em] text-stone-900"
             onClick={() => setIsOpen(false)}
           >
