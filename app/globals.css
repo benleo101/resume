@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "THSarabunNew";
-  src: url("/font/2.3.2%20THSarabunNew.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --background: #ebe2d3;
   --foreground: #1f1a17;
@@ -39,7 +31,7 @@ body {
     radial-gradient(circle at top right, rgba(180, 83, 9, 0.12), transparent 22%),
     linear-gradient(180deg, #f4ede3 0%, #ebe2d3 45%, #e3d8c8 100%);
   color: var(--foreground);
-  font-family: "THSarabunNew", "TH Sarabun New", "Sarabun", "Segoe UI", sans-serif;
+  font-family: var(--font-th-sarabun), "TH Sarabun New", "Sarabun", "Segoe UI", sans-serif;
   font-size: clamp(1.65rem, 1.1rem + 1.3vw, 2.35rem);
   line-height: 1.2;
   margin: 0;
